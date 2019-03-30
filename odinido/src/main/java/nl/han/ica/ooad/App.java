@@ -6,8 +6,18 @@ package nl.han.ica.ooad;
  */
 public class App 
 {
+
+    public static Docent docent = new Docent();
+    public static Observer student = new Student("Anna");
+    public static Lokaal lokaal = new Lokaal();
+
     public static void main( String[] args )
     {
-        System.out.println( "Hello World!" );
+        lokaal.setLokaalCode("Lokaal1");
+        docent.lokalen.add(lokaal);
+
+        docent.ditIsMijnLeerling(student);
+
+        docent.houdKennistoets("ODI23644129", "Lokaal1");
     }
 }
