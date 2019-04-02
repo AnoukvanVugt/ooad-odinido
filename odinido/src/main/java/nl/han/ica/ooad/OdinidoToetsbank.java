@@ -1,6 +1,6 @@
 package nl.han.ica.ooad;
 
-public class OdinidoToetsbank {
+class OdinidoToetsbank {
 
 	private Kennistoets maakToetsODI23644129() {
 		Kennistoets toets = new Kennistoets("ODI23644129", "Requirements");
@@ -52,7 +52,7 @@ public class OdinidoToetsbank {
 		return null;
 	}
 
-	public Kennistoets selecteerToets(String toetscode) {
+	Kennistoets selecteerToets(String toetscode) {
 		if ("ODI23644129".equals(toetscode)) {
 		    return maakToetsODI23644129();
 		} else if ("ODI24878686".equals(toetscode)) {

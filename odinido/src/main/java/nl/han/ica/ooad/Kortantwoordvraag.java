@@ -5,14 +5,14 @@ import java.util.List;
 
 public class Kortantwoordvraag implements Vraag {
 
-    public String vraag;
-    public List<KortAntwoord> antwoorden = new ArrayList<>();
+    private String vraag;
+    private List<KortAntwoord> antwoorden = new ArrayList<>();
 
-    public Kortantwoordvraag(String vraag) {
+    Kortantwoordvraag(String vraag) {
         this.vraag = vraag;
     }
 
-    public void voegAntwoordToe(String antwoord) {
+    void voegAntwoordToe(String antwoord) {
         antwoorden.add(new KortAntwoord(antwoord));
     }
 
@@ -23,5 +23,10 @@ public class Kortantwoordvraag implements Vraag {
             antwoordenAsStrings.add(antwoord.getAntwoord());
         }
         return antwoordenAsStrings;
+    }
+
+    @Override
+    public String getVraag() {
+        return vraag;
     }
 }

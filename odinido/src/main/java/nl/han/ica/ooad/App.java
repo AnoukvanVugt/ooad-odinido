@@ -7,9 +7,9 @@ package nl.han.ica.ooad;
 public class App 
 {
 
-    public static Docent docent = new Docent();
-    public static Observer student = new Student("Anna");
-    public static Lokaal lokaal = new Lokaal();
+    private static Docent docent = new Docent();
+    private static Observer student = new Student("Anna");
+    private static Lokaal lokaal = new Lokaal();
 
     public static void main( String[] args )
     {

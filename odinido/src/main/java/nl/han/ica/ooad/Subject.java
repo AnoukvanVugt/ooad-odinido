@@ -3,9 +3,9 @@ package nl.han.ica.ooad;
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class Subject {
+abstract class Subject {
 
-    public List<Observer> studenten = new ArrayList<>();
+    private List<Observer> studenten = new ArrayList<>();
 
     void ditIsMijnLeerling(Observer student) {
         studenten.add(student);

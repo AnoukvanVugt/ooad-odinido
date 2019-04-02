@@ -2,24 +2,15 @@ package nl.han.ica.ooad;
 
 public class Student implements Observer {
 
-    public String studentnaam;
+    private String studentnaam;
 
-    public Student(String studentnaam) {
+    Student(String studentnaam) {
         this.studentnaam = studentnaam;
     }
 
     @Override
     public void update(Lokaal lokaal) {
-        lokaal.meldAan(this);
-    }
-
-    public String geefAntwoord() {
-
-        return("abc");
-    }
-
-    public String getStudentnaam() {
-        return studentnaam;
+        lokaal.meldAan(studentnaam);
     }
 
 }

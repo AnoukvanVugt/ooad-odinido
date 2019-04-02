@@ -4,14 +4,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Meerkeuzevraag implements Vraag {
-    public String vraag;
-    public List<MeerkeuzeAntwoord> antwoorden = new ArrayList<>();
+    private String vraag;
+    private List<MeerkeuzeAntwoord> antwoorden = new ArrayList<>();
 
-    public Meerkeuzevraag(String vraag) {
+    Meerkeuzevraag(String vraag) {
         this.vraag = vraag;
     }
 
-    public void voegAlternatiefToe(String alternatief, boolean juisteAntwoord) {
+    void voegAlternatiefToe(String alternatief, boolean juisteAntwoord) {
         antwoorden.add(new MeerkeuzeAntwoord(alternatief, juisteAntwoord));
     }
 
@@ -24,5 +24,16 @@ public class Meerkeuzevraag implements Vraag {
             }
         }
         return antwoordenAsString;
+    }
+
+    @Override
+    public String getVraag() {
+        String alternatieven = "";
+        int i = 1;
+        for(MeerkeuzeAntwoord antwoord : antwoorden) {
+            alternatieven += i + ". " + antwoord.getAlternatief() + "\n";
+            i++;
+        }
+        return vraag + "\n" + alternatieven;
     }
 }

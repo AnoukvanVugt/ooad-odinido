@@ -1,14 +1,14 @@
 package nl.han.ica.ooad;
 
-public class KortAntwoord {
+class KortAntwoord {
 
-    String antwoord;
+    private String antwoord;
 
-    public KortAntwoord(String antwoord) {
+    KortAntwoord(String antwoord) {
         this.antwoord = antwoord;
     }
 
-    public String getAntwoord() {
+    String getAntwoord() {
         return antwoord;
     }
 }

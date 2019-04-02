@@ -4,5 +4,6 @@ import java.util.List;
 
 public interface Vraag {
     List<String> getAntwoorden();
+    String getVraag();
 
 }
